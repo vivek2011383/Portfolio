@@ -1,0 +1,6 @@
+[00:00:03.371] Server  LOG      ✓ Ready in 2s
+[00:00:06.445] Server  LOG      ○ Compiling / ...
+[00:00:17.532] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:17.687] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.929] Browser WARN    Tried to use the 'fill' option without the 'Filler' plugin enabled. Please import and register the 'Filler' plugin and make sure it is not disabled in the options
+[00:00:19.331] Browser WARN    Tried to use the 'fill' option without the 'Filler' plugin enabled. Please import and register the 'Filler' plugin and make sure it is not disabled in the options
