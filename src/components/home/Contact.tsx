@@ -16,7 +16,7 @@ export default function ContactSection() {
   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const accessKey = '4e675511-55b8-4a4e-9d9c-63db16f3e8ce'; // Replace with your Web3Forms access key
+  const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || '4e675511-55b8-4a4e-9d9c-63db16f3e8ce'; // Replace with your Web3Forms access key
 
   const validateForm = () => {
     const newErrors: any = {};
