@@ -59,7 +59,7 @@ export default function Hero() {
               View Projects
             </a>
             <a
-              href="www.linkedin.com/in/vivekkumar2011383"
+              href="https://www.linkedin.com/in/vivekkumar2011383"
               className="button-secondary"
               target="_blank"
               rel="noopener noreferrer"
