@@ -39,7 +39,7 @@ const projects: Project[] = [
     category: 'Customer Analytics',
     tools: ['Python','Excel' , 'Matplotlib'],
   image: '/projects/market-segmentation.png',
-  link: 'https://github.com/vivek2011383/Spreadsheet-Modelling/Customer_Segmentation_Analysis_Vivek_590020267.pdf',
+  link: 'https://github.com/vivek2011383/Spreadsheet-Modelling/blob/main/Customer_Segmentation_Analysis_Vivek_590020267.pdf',
   },
   {
     id: 4,
