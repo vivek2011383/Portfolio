@@ -35,6 +35,10 @@ const skillCategories: SkillCategory[] = [
       { name: 'NumPy', proficiency: 80 },
       { name: 'Matplotlib', proficiency: 90 },
       { name: 'Seaborn', proficiency: 90 },
+      { name: 'NLTK', proficiency: 80 },
+      { name: 'spaCy', proficiency: 75 },
+      { name: 'LangChain', proficiency: 75 },
+      { name: 'Generative AI', proficiency: 80 },
     ],
   },
   {
