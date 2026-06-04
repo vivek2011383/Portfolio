@@ -17,18 +17,38 @@ interface Achievement {
 
 const certifications: Certification[] = [
   {
+    title: 'Claude 101',
+    issuer: 'Anthropic',
+    date: 'May 2026',
+    credential: 'tuzpw5skg45o',
+    link: 'https://verify.skilljar.com/c/tuzpw5skg45o',
+  },
+  {
+    title: 'Business Intelligence & Analytics',
+    issuer: 'NPTEL – IIT Madras',
+    date: 'May 2026',
+    credential: 'NPTEL26CS64S253400756',
+    link: 'https://nptel.ac.in/noc/E_Certificate/NOC26CS64S25340075605033124',
+  },
+  {
+    title: 'Marketing Analytics',
+    issuer: 'NPTEL – IIT Kharagpur',
+    date: 'April 2026',
+    credential: 'NPTEL26MG33S953400101',
+    link: 'https://nptel.ac.in/noc/E_Certificate/NOC26MG33S95340010105033124',
+  },
+  {
+    title: 'Boot Camp for Artificial Intelligence (AI) & Business Analytics',
+    issuer: 'LSBF Malaysia Campus (London School of Business & Finance)',
+    date: 'April 2026',
+    credential: '10146',
+  },
+  {
     title: 'Data Analytics',
     issuer: 'LinkedIn Learning',
     date: 'October 2025',
     credential: '2c925f4ffd8adf0013a143f68fb2adc6e519c56932943a6c694a0c7a4bb163f7',
     link: 'https://www.linkedin.com/learning/certificates/2c925f4ffd8adf0013a143f68fb2adc6e519c56932943a6c694a0c7a4bb163f7',
-  },
-  {
-    title: 'Data Analytics Program',
-    issuer: 'PW Skills',
-    date: 'September 2025',
-    credential: '26069455-9758-4533-a5c4-9288269c8014',
-    link: 'https://pwskills.com/learn/certificate/26069455-9758-4533-a5c4-9288269c8014/?isCareerPath=true',
   },
   {
     title: 'Copilot for Excel',
@@ -43,6 +63,13 @@ const certifications: Certification[] = [
     date: 'October 2025',
     credential: 'af4e8157ee444c4ab4f6fe12a410ab77',
     link: 'https://app-na2.hubspot.com/academy/achievements/nydggcwf/en/1/vivek-kumar/digital-marketing',
+  },
+  {
+    title: 'Data Analytics Program',
+    issuer: 'PW Skills',
+    date: 'September 2025',
+    credential: '26069455-9758-4533-a5c4-9288269c8014',
+    link: 'https://pwskills.com/learn/certificate/26069455-9758-4533-a5c4-9288269c8014/?isCareerPath=true',
   },
   {
     title: 'Foundations of Analytics',
@@ -105,26 +132,26 @@ export default function Certifications() {
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
                     viewport={{ once: true }}
                     className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
                   >
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <h4 className="text-xl font-semibold text-primary-600 dark:text-primary-400">
+                    <div className="flex justify-between items-start gap-4">
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-lg font-semibold text-primary-600 dark:text-primary-400 leading-snug">
                           {cert.title}
                         </h4>
                         <p className="text-gray-600 dark:text-gray-300 mt-1">
                           {cert.issuer}
                         </p>
                       </div>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">
+                      <span className="shrink-0 text-sm text-gray-500 dark:text-gray-400 whitespace-nowrap">
                         {cert.date}
                       </span>
                     </div>
                     <div className="mt-2 space-y-1">
                       {cert.credential && (
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <p className="text-sm text-gray-500 dark:text-gray-400 truncate">
                           Credential ID: {cert.credential}
                         </p>
                       )}

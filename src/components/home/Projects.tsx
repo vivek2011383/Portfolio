@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image'
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 interface Project {
@@ -14,6 +14,18 @@ interface Project {
   link?: string;
 }
 
+// Add dashboard images extracted from the provided assets
+const extraDashboards: Project[] = [
+  { id: 6, title: 'Dashboard 1', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image8.png' },
+  { id: 7, title: 'Dashboard 2', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image9.png' },
+  { id: 8, title: 'Dashboard 3', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image10.png' },
+  { id: 9, title: 'Dashboard 4', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Power BI'], image: '/projects/image11.png' },
+  { id: 10, title: 'Dashboard 5', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image12.png' },
+  { id: 11, title: 'Dashboard 6', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image13.png' },
+  { id: 12, title: 'Dashboard 7', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image14.png' },
+  { id: 13, title: 'Dashboard 8', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image15.png' },
+];
+
 const projects: Project[] = [
   {
     id: 1,
@@ -21,25 +33,25 @@ const projects: Project[] = [
     description: 'Analyzed 47% asset growth and 10% peak D/E ratio from FY21-FY25. Created comprehensive Excel dashboard for financial metrics visualization.',
     category: 'Financial Analytics',
     tools: ['Generative AI', 'Excel', 'Financial Modeling'],
-  image: '/projects/dabur-project.png',
-  link: 'https://github.com/vivek2011383/Dabur_Financial_analysis-FY21-FY25-',
+    image: '/projects/dabur-project.png',
+    link: 'https://github.com/vivek2011383/Dabur_Financial_analysis-FY21-FY25-',
   },
   {
     id: 2,
     title: 'Digital Divide & Consumer Behavior',
     description: 'Conducted regression analysis and hypothesis testing on 45K records of CMS data to analyze online consumer behavior patterns.',
     category: 'Market Research',
-    tools: ['Python', 'Pandas','Scikit-learn', 'Statistics', 'Excel'],
-  image: '/projects/digital-divide.png',
+    tools: ['Python', 'Pandas', 'Scikit-learn', 'Statistics', 'Excel'],
+    image: '/projects/digital-divide.png',
   },
   {
     id: 3,
     title: 'Market Segmentation Analysis',
     description: 'Implemented RFM model to classify customers into segments like "Big Spenders" and "Dormant Buyers" for targeted marketing.',
     category: 'Customer Analytics',
-    tools: ['Python','Excel' , 'Matplotlib'],
-  image: '/projects/market-segmentation.png',
-  link: 'https://github.com/vivek2011383/Spreadsheet-Modelling/blob/main/Customer_Segmentation_Analysis_Vivek_590020267.pdf',
+    tools: ['Python', 'Excel', 'Matplotlib'],
+    image: '/projects/market-segmentation.png',
+    link: 'https://github.com/vivek2011383/Spreadsheet-Modelling/blob/main/Customer_Segmentation_Analysis_Vivek_590020267.pdf',
   },
   {
     id: 4,
@@ -47,8 +59,8 @@ const projects: Project[] = [
     description: 'Created interactive SQL & Power BI dashboard analyzing 21.3K orders and ₹817.8K revenue with detailed sales metrics.',
     category: 'Business Intelligence',
     tools: ['SQL', 'Power BI', 'DAX'],
-  image: '/projects/pizza-sales.png',
-  link: 'https://github.com/vivek2011383/Pizza-Sales-Project',
+    image: '/projects/pizza-sales.png',
+    link: 'https://github.com/vivek2011383/Pizza-Sales-Project',
   },
   {
     id: 5,
@@ -56,17 +68,35 @@ const projects: Project[] = [
     description: 'Developed comprehensive dashboard analyzing 20.6% attrition rate by various demographics and organizational factors.',
     category: 'HR Analytics',
     tools: ['Power BI', 'Excel', 'SQL'],
-  image: '/projects/hr-analytics.png',
-  link: 'https://www.linkedin.com/posts/vivekkumar2011383_hr-analytics-powerbi-activity-7292856023671869442-IxLR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADszCWYBAL6xaUvO40eEG3G8MqZmQOIqcn4',
+    image: '/projects/hr-analytics.png',
+    link: 'https://www.linkedin.com/posts/vivekkumar2011383_hr-analytics-powerbi-activity-7292856023671869442-IxLR?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAADszCWYBAL6xaUvO40eEG3G8MqZmQOIqcn4',
   },
   {
     id: 20,
     title: 'Nimbly Electronics Product Analysis',
     description: 'Product performance analysis using the BCG matrix and recommendations for portfolio optimization.',
     category: 'Market Research',
-    tools: ['Excel', 'Power BI','Marketing Concepts'],
+    tools: ['Excel', 'Power BI', 'Marketing Concepts'],
     image: '/projects/image6.png',
     link: 'https://github.com/vivek2011383/Nimbly_Electronics_Products_analysis/blob/main/Product%20Performance%20Analysis%20using%20BCG%20Matrix.pdf',
+  },
+  {
+    id: 21,
+    title: 'PRISM Score Dashboard',
+    description: 'Built an 18-criteria, 6-category employability scoring dashboard for MBA students at UPES. Features DAX-powered RANKX logic, percentile ranking, cohort comparisons, and dynamic slicer filtering across relationships.',
+    category: 'Business Intelligence',
+    tools: ['Power BI', 'DAX', 'Excel'],
+    // Replace '/projects/prism-dashboard.png' with your actual image filename once added to public/projects/
+    image: '/projects/prism-dashboard.png',
+  },
+  {
+    id: 22,
+    title: 'Amazon Reviews Sentiment Analysis',
+    description: 'NLP-based sentiment analysis on Amazon product reviews. Classified customer feedback into positive, negative, and neutral sentiments to derive actionable product insights.',
+    category: 'Market Research',
+    tools: ['Python', 'NLP', 'Pandas', 'Matplotlib'],
+    // Replace '/projects/amazon-sentiment.png' with your actual image filename once added to public/projects/
+    image: '/projects/amazon-sentiment.png',
   },
 ];
 
@@ -114,6 +144,7 @@ export default function Projects() {
               </motion.button>
             ))}
           </div>
+
           {/* Project Grid */}
           <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
             <AnimatePresence>
@@ -128,15 +159,18 @@ export default function Projects() {
                   className="project-card cursor-pointer"
                   onClick={() => setSelectedProject(project)}
                 >
-                  <div className="relative h-[200px] w-full">
+                  <div className="relative h-[200px] w-full bg-primary-500/10">
                     <div className="absolute inset-0 bg-primary-500/10"></div>
-                    {/* Project thumbnail (uses public/ files) */}
                     <Image
                       src={project.image}
                       alt={project.title}
                       fill
                       sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover"
+                      onError={(e) => {
+                        // Hide broken image icon gracefully for placeholders
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
                     />
                   </div>
                   <div className="p-6">
@@ -215,14 +249,3 @@ export default function Projects() {
     </section>
   );
 }
-  // Add dashboard images extracted from the provided assets
-  const extraDashboards: Project[] = [
-    { id: 6, title: 'Dashboard 1', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image8.png' },
-    { id: 7, title: 'Dashboard 2', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image9.png' },
-    { id: 8, title: 'Dashboard 3', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image10.png' },
-    { id: 9, title: 'Dashboard 4', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Power BI'], image: '/projects/image11.png' },
-    { id: 10, title: 'Dashboard 5', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image12.png' },
-    { id: 11, title: 'Dashboard 6', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image13.png' },
-    { id: 12, title: 'Dashboard 7', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image14.png' },
-    { id: 13, title: 'Dashboard 8', description: 'Dashboard visualization from portfolio assets.', category: 'Dashboards', tools: ['Excel'], image: '/projects/image15.png' },
-  ];
