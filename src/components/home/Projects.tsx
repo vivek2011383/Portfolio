@@ -92,11 +92,11 @@ const projects: Project[] = [
   {
     id: 22,
     title: 'Amazon Reviews Sentiment Analysis',
-    description: 'NLP-based sentiment analysis on Amazon product reviews. Classified customer feedback into positive, negative, and neutral sentiments to derive actionable product insights.',
+    description: 'NLP-based sentiment analysis on Amazon product reviews...',
     category: 'Market Research',
     tools: ['Python', 'NLP', 'Pandas', 'Matplotlib'],
-    // Replace '/projects/amazon-sentiment.png' with your actual image filename once added to public/projects/
     image: '/projects/amazon-sentiment.png',
+    link: 'https://github.com/vivek2011383/Amazon_Sentiment_Analysis',
   },
 ];
 
