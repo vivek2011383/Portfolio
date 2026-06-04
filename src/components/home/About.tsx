@@ -14,7 +14,7 @@ const education: Education[] = [
     institution: 'UPES Dehradun',
     degree: 'MBA (Business Analytics)',
     duration: '2025-27',
-    score: 'In Progress',
+    score: '9.23 SGPA',
   },
   {
     institution: 'Delhi University',
