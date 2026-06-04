@@ -21,7 +21,7 @@ export default function Hero() {
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8">
-            Emerging Business Analyst | MBA (Business Analytics) | Data Enthusiast
+            Emerging Business Analyst | Marketing & Consumer Analytics | Strategy & Insights | MBA (Business Analytics)
           </h2>
 
           <div className="text-xl md:text-2xl text-primary-600 dark:text-primary-400 mb-12">
@@ -29,13 +29,21 @@ export default function Hero() {
               sequence={[
                 'Business Analytics',
                 2000,
+                'Marketing Analytics',
+                2000,
+                'Consumer Insights',
+                2000,
                 'Power BI',
                 2000,
-                'Excel',
+                'Strategy & Insights',
                 2000,
                 'Python',
                 2000,
+                'Market Segmentation',
+                2000,
                 'SQL',
+                2000,
+                'Generative AI',
                 2000,
                 'Data Storytelling',
                 2000,
