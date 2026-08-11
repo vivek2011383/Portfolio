@@ -56,7 +56,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://drive.google.com/file/d/1LdQ6qU64dhrjOG6taE4HaTNI4napZ3PF/view?usp=sharing"
+              href="https://drive.google.com/file/d/1b_CTlx6C5dcnR9yVvIMn9i1uhHBElDvz/view?usp=sharing"
               className="button-primary"
               target="_blank"
               rel="noopener noreferrer"
